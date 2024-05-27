@@ -1,0 +1,205 @@
+/* Define las variables de colores en el bloque :root 
+Estas variables se usarán para definir los colores en
+todo el documento. :root, es un selector de CSS especial
+que selecciona el elemento raíz del documento HTML, 
+es decir, el elemento <html>. 
+Permite definir variables globales que se pueden
+usar en cualquier
+parte del documento CSS. #007bff */
+:root{
+    --color-primario:#f1f5f5;
+    --color-fondo-header: var(--color-primario);
+    --color-texto-header: black;
+    --color-azul-body: rgba(0, 139, 191, 1); 
+    --color-gris-body: rgba(255, 255, 255, 0.4);
+    --color-logo-sombra: rgba(83, 175, 236, 0.5);
+    margin: 10px;
+
+}
+/* Hoja de estilos externa */
+/* Selectores universal */
+/* El selector universal puede ser muy útil en algunos casos para resetear ciertas propiedades
+   de todo un documento */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Selectores de tipo o etiqueta */
+h1 {
+    font-size: 60px;
+    color: blue;
+    background-color: lightblue;
+}
+h2 {
+    color: blue;
+    background-color: lightblue;
+}
+
+ p{
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+}
+img{
+    width:500px; height:600px;
+}
+th, td{
+    width: 50%;
+    font-size: 25px;
+    text-align: left;
+    vertical-align: top;
+    padding: 10px;
+}
+ol, ul{
+     padding: 0px 450px 10px;
+}
+/* Seleccionar el id de la sección con fondo y definir:
+imagen de fondo,tamaño, posición, color, alinear texto, alto margen
+y relleno cero. */
+#seccion-con-fondo{
+    background-image: url('../img/Catolicismo.png'); /*url('../img/beautiful-shot-moreno-glacier-santa-cruz-argentina.jpg');*/
+    background-size:cover;
+    background-position: center;
+    text-align: center;
+    height: 100vh;
+    padding-left: 0.5cm;
+
+}
+
+.tabla{
+    width: 25%;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.titulo{
+    font-size: 50px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:transparent;
+    background-clip: text;
+    margin: 10px;
+}
+
+/* Selectores de clase */
+.subtitulos {
+    margin-left: 50px;
+    color: yellowgreen;
+    background-color:olivedrab;
+}
+/* Asignar una id llamada logo y seleccionar id
+Aplica estilos ancho, alto, hacer el logo circular, 
+separar el logo del menú especificando margen a la derecha.
+ */
+ #logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 400px;
+}
+
+/*  Seleccionar del header el menu y la división para 
+cambiar el comportamiento en bloque para que esten en
+la misma linea y que queden verticalmente alineados
+dentro el contenedor. */
+.en-linea{
+    display: inline;
+    vertical-align: middle;
+}
+
+/*  Selecionar los hiperviculos del
+menu de navegación se le agregará color, eliminar
+toda decoración del texto(subrayado) y margen sólo
+a los costados, superior e inferior nada. */
+.hipervinc{
+    color: var(--color-texto-header);
+    text-decoration: none;
+    margin: 0 10px;
+}
+/* Selectores de ID */
+#texto {
+    color: black;
+    background-color: lightblue;
+    font-style: normal;
+    font-size: 100%;
+  /*  text-align: center;
+    background-color: lightblue;
+    margin-left: 100px;*/
+}
+#texto2 {
+    color: black;
+   /* background-color: white;*/
+    font-style: normal;
+    font-size: 100%;
+    text-align: center;
+    background-color: lightblue;
+    margin-left: 100px;
+}
+
+/*-----------background PSEUDOCLASES PARA ETIQUETAS < A > --------------*/
+a{ color: white}
+a:link {color: red;}
+a:hover {background-color: yellow;}
+a:visited {color: blue;}
+a:active {background-color: green; color: white;}
+
+.contenedor {
+    display: flex; /*aca le digo que es flexible */
+    /*flex-direction:row-reverse;*/
+    /*flex-direction:column;*/
+    flex-direction:row;
+    /* flex-wrap: nowrap; */ /* valor por defecto, todos los ítems en un sola línea. */
+    flex-wrap: wrap;
+    background-color: blue;
+}
+
+.contenedor > div {
+    background-color: red;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+form{
+    padding: 40px;
+}
+
+header{
+    background-color: var(--color-fondo-header);
+    color: var(--color-texto-header);
+    text-align: left; /* center; */
+    padding: 20px;
+}
+
+footer{
+    background-color: var(--color-fondo-header);
+    color:var(--color-texto-header);
+    text-align: left; /* center; */
+    padding: 20px;
+}
+
+.texto1 {
+    color:black;
+    font-style: normal;
+    font-size: 150%;
+    align-content: center;
+    text-align: justify;
+    background-color: lightblue;
+}
+
+.texto2 {
+    color:black;
+    font-style: normal;
+    font-size: 150%;
+    align-content: center;
+    text-align: center;
+    background-color: lightblue;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML, Multimedia, audio, video, mapa, tabla, icono">
+        <!-- Descripción -->
+        <meta name="description" content="Incorporación de Multimedia, audio, video, mapas y tablas para representación datos">
+            <link rel="icon" href="../statics/img/MundoCatolico.ico">
+        <link rel="stylesheet" href="../statics/css/formulario.css">
+        <title>Inicio</title>
+    </head>
+    
+<body>
+    <header>
+        <div class="en-linea">
+            <img id="logo" src="../statics/img/MundoCatolico.jpg" alt="logo">
+        </div>
+
+        <nav class="en-linea">
+            <a class="hipervinc" href="../index.html">Inicio</a>
+            <a class="hipervinc" href="listas.html">Qué Ofrecemos?</a>
+            <a class="hipervinc" href="formulario.html">Contacto</a>
+        </nav>
+    </header>
+<main>
+    <h2>Formulario de Contacto para dudas o comentarios</h2>
+<!--  <form id="MiForm" action="show_data.html" target="_blank"> -->
+     <form id="MiForm"  action="formulario.html" method="post" onsubmit="return validarDatos()"> 
+        <label for="firstname">Nombre: &nbsp&nbsp&nbsp</label><input size="30" type="text" name="Nombre"
+            id = "firstname" placeholder="Ingrese su nombre aqui..."> <br><br>
+        <label for="lastname">Apellido: &nbsp&nbsp</label><input size="30" type="text" name="Apellido"
+             id = "lastname" placeholder="Ingrese su apellido aqui..."> <br><br>
+        <label for="direccion">Dirección: </label><input size="30" type="text" name="Direccion"
+             id = "direccion" placeholder="Ingrese su direccion aqui..."> <br><br>
+        <label for="number">Número: &nbsp&nbsp</label><input type="number" name="Numero" 
+             id = "number" placeholder="Ingrese el numero..">
+        <br><br>
+        <label for="city">Ciudad: &nbsp&nbsp&nbsp</label><input size="30"  type="text" name="Ciudad" id = "city" value="C.A.B.A."> <br><br>
+        <label for="zipcode">Código Postal: </label><input type="text" name="Codigo_Postal"
+            id = "zipcode" placeholder="Ingrese su codigo postal aqui..."> <br> <br>
+        <label for="telefono">Teléfono: </label><input type="tel" name="Telefono"
+            id = "telefono" placeholder="ingrese su telefono aqui ...."> <br><br>
+        <label for="birthdate">Fecha Nac.(mm/dd/yyyy): </label> <input type="date" name="Fecha_Nacimiento"
+            id = "birthdate"> <br><br>
+        <label for="Mail">Mail: &nbsp&nbsp</label><input size="30" type="email" name="Mail" id = "Mail" > <br><br>
+        <label for="Clave">Clave: </label><input size="30"  type="password" name="Clave" id = "Clave" > <br><br>
+
+        <p class="texto">Género <!-- (Radio) -->
+            <input type="radio" id="hombre" name="Genero" value="Hombre" checked>
+            <label for="hombre">Hombre</label>
+            <input type="radio" id="mujer" name="Genero" value="Mujer">
+            <label for="mujer">Mujer</label><br>
+        </p>
+        <br>
+        <p class="texto"> Oraciones que conoce : <!-- Conocimientos previos (checkbox) -->
+            <label for="Oracion0">Ninguna</label>
+            <input type="checkbox" id="Oracion0" name="Conocimientos" value="Ninguna"> 
+            <label for="Oracion1">La señal de la Cruz</label>
+            <input type="checkbox" id="Oracion1" name="Conocimientos" value="La señal de la Cruz"> 
+            <label for="Oracion2">El Padre Nuestro</label>
+            <input type="checkbox" id="Oracion2" name="Conocimientos" value="Oracion2"> 
+            <label for="Oracion3">El Ave María</label>
+            <input type="checkbox" id="Oracion3" name="Conocimientos" value="Oracion3"> 
+            <label for="Oracion4">El Gloria</label>
+            <input type="checkbox" id="Oracion4" name="Conocimientos" value="Oracion4"> 
+            <label for="Oracion5"> El Credo</label>
+            <input type="checkbox" id="Oracion5" name="Conocimientos" value="Oracion5">
+            <label for="Oracion6">El Salve</label>
+            <input type="checkbox" id="Oracion6" name="Conocimientos" value="Oracion6">  
+            <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <label for="Oracion7">El decálogo de los Mandamientos</label>
+            <input type="checkbox" id="Oracion7" name="Conocimientos" value="Oracion7"> 
+            <label for="Oracion8">Los Sacramentos</label>
+            <input type="checkbox" id="Oracion8" name="Conocimientos" value="Oracion8"> 
+            <label for="Oracion9">Las Bienaventuranzas</label>
+            <input type="checkbox" id="Oracion9" name="Conocimientos" value="Oracion9"> 
+            <label for="Oracion10">Las Obras de Misericordia</label>
+            <input type="checkbox" id="Oracion10" name="Conocimientos" value="Oracion10"> 
+          
+        </p>
+        <br><br>
+
+        <label for="Estudios">Estudios: (Select)</label>
+        <select id="Estudios" name="Estudios">
+            <option value="Sin Estudio Formal">No Formal</option>
+            <option value="primaria">Primaria</option>
+            <option value="secundaria">Secundaria</option>
+            <option value="terciario">Terciario</option>
+            <option value="universitario">Universitario</option>
+        </select>
+        <br> <br>
+
+        <label for="comentarios">Comentarios:</label> <textarea name="Comentarios" 
+        id = "comentarios" rows="10" cols="30"></textarea>
+        <br><br>
+        <div id="campos"></div>
+        <input type="submit" value="Enviar">
+        <button type="reset">Reset</button>
+    </form>
+ <!--   <br>
+    <p>Si usted hace click en el boton "Enviar", la informacion sera enviada a la pagina "show_data.html".</p>
+-->
+</main>
+<footer>
+    <h3>Mundo Católico</h3> 
+    <a href="mailto:">Enviar correo</a> 
+    <h4>Desarrollado por Comisión 24167 - Grupo 12</h4>
+    <h4> © Todos los derechos reservados</h4> 
+    
+
+</footer>
+
+<script src="../statics/js/formulario.js"></script> 
+
+</body>
+
+</html>
