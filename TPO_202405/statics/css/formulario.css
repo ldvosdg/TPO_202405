@@ -4,8 +4,7 @@ todo el documento. :root, es un selector de CSS especial
 que selecciona el elemento raíz del documento HTML, 
 es decir, el elemento <html>. 
 Permite definir variables globales que se pueden
-usar en cualquier
-parte del documento CSS. #007bff */
+usar en cualquier parte del documento CSS. #007bff */
 :root{
     --color-primario:#f1f5f5;
     --color-fondo-header: var(--color-primario);
