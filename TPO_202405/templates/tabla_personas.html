@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!--  <link rel="stylesheet" href="/TPO_202405/statics/css/tabla_personas.css">--> 
+ <link rel="icon" href="../statics/img/MundoCatolico.ico">
+ <link rel="stylesheet" href="../statics/css/ingresar_persona.css">
+    <link rel="stylesheet" href="../statics/css/tabla_personas.css">
+    <title>Consulta</title>
+</head>
+<body>
+
+    <header id="header"></header>
+
+    <main>
+
+        <section class="container">
+            <div id="app" >
+
+                <!-- Botón Nuevo -->
+                <a class="nuevo" href="ingresar_persona.html">Nuevo</a>
+
+                <section v-if="error">Lo sentimos se produjo un error</section>
+                <section v-else>
+                    <section v-if="cargando">
+                        <p>Cargando .....</p>
+
+                    </section>
+
+                    <section v-else>
+                        
+                        <div >
+                            <table class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Correo</th>
+                                        <th>Clave</th>
+                                        <th>Telefono</th>
+                                        <th>Género</th>
+                                        <th>País</th>
+                                        <th>Nacionalidad</th>
+                                        <th>Imagen</th>
+                                        <th>Acciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                    <tr v-for="persona in personas">
+                                        <td >{{persona.id}}</td>
+                                        <td>{{persona.nombre}}</td>
+                                        <td>{{persona.apellido}}</td>
+                                        <td>{{persona.correo}}</td>
+                                        <td>{{persona.passwd}}</td>
+                                        <td>{{persona.telefono}}</td>
+                                        <td>{{persona.genero}}</td>
+                                        <td>{{persona.pais}}</td>
+                                        <td>{{persona.nacionalidad}}</td>
+                                        <td>
+                                            <img :src="persona.imagen" alt="">
+                                        </td>
+                                        <td>
+                                            <button type="button"  v-on:click="eliminar(persona.id)">Eliminar</button>
+                                        </td>
+                                        <td>
+                                            <a class="boton" :href="'editar_persona.html?id='+ persona.id+'&nombre=' +persona.nombre+ '&apellido='+persona.apellido+ '&correo='+persona.correo + '&passwd='+persona.passwd + '&telefono='+persona.telefono + '&genero=' +persona.genero+ '&pais='+persona.pais+'&nacionalidad='+persona.nacionalidad +  '&imagen='+persona.imagen">Editar</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>Mundo Católico</h3> 
+        <div>
+           <a href="https://maps.app.goo.gl/i2oPWUdpTVxkDBr26">Ubicación</a>
+         </div>
+         <div> 
+           <a href="mailto:">Enviar correo</a> 
+         </div>
+        <h3>Desarrollado por Comisión 24167 - Grupo 12</h3>
+        <h3> © Todos los derechos reservados</h3>       
+    </footer>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<!--   <script src="/TPO_202405/statics/js/tabla_personas.js"></script>
+    <script src="/TPO_202405/statics/js/header.js"></script>--> 
+    <script src="../statics/js/tabla_personas.js"></script>
+    <script src="../statics/js/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--  <link rel="stylesheet" href="/TPO_202405/statics/css/ingresar_persona.css">
+    <link rel="stylesheet" href="/TPO_202405/statics/css/tabla_personas.css"> -->  
+    <link rel="icon" href="../statics/img/MundoCatolico.ico">
+    <link rel="stylesheet" href="../statics/css/ingresar_persona.css">
+    <link rel="stylesheet" href="../statics/css/tabla_personas.css">
+    <title>Editar</title>
+</head>
+<body>
+    <header id="header"></header>
+
+    <main>
+        <section>
+
+            <div class="container-form">
+                <form>
+                   
+                    <div>
+                        <label for="id">&nbsp&nbspID</label>
+                        <input type="number" name="id" id="id" disabled>
+                    </div>
+            
+                    <div>
+                        <label for="nombre">&nbsp&nbspNombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="apellido">&nbsp&nbspApellido:</label>
+                        <input type="text" name="apellido" id="apellido">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="correo">&nbsp&nbspCorreo:</label>
+                        <input type="mail" name="correo" id="correo">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="passwd">&nbsp&nbspClave:</label>
+                        <input type="password" name="passwd" id="passwd">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="telefono">&nbsp&nbspN° Teléfono:</label>
+                        <input type="number" name="telefono" id="telefono">
+                    </div>
+                    <div class="entrada">
+<!--                        <label for="genero">Genero (Select)</label>
+                      <input type="text" name="genero" id="genero">
+                        <label for="Estudios">Estudios: (Select)</label>  
+                        <select id="genero" name="genero">
+                            <option value="Femenino">Femenino</option>
+                            <option value="Masculino">Masculino</option>
+                        </select>
+                        <p class="texto">Género <!-- (Radio) -->
+                 <!--       <p>Género  (Radio) -->
+                            <label for="genero">&nbsp&nbspGénero:</label>
+                            <input type="text" name="genero" id="genero">
+<!--                     <input type="radio" id="hombre" name="Genero" value="Hombre" >
+                            <label for="hombre">Hombre</label>
+                            <input type="radio" id="mujer" name="Genero" value="Mujer">
+                            <label for="mujer">Mujer</label><br>
+                        </p>-->  
+                    </div>
+
+                    <div class="entrada">
+                        <label for="pais">&nbsp&nbspPaís:</label>
+                        <input type="text" name="pais" id="pais" disabled>
+                    </div>
+
+                    <div class="entrada">
+                        <label for="nacionalidad">&nbsp&nbspNacionalidad:</label>
+                        <input type="text" name="nacionalidad" id="nacionalidad" disabled>
+                    </div>
+
+                    <div class="entrada">
+                        <label for="imagen">&nbsp&nbspImagen:</label>
+                        <input type="text" name="imagen" id="imagen">
+                    </div>
+
+                    
+                    <button class="modificar" type="button" onclick="modificar()">Modificar</button>
+                </form>
+          
+          
+              </div>
+
+        </section>
+    </main>
+
+    
+    <footer>
+        <h3>Mundo Católico</h3> 
+        <div>
+           <a href="https://maps.app.goo.gl/i2oPWUdpTVxkDBr26">Ubicación</a>
+         </div>
+         <div> 
+           <a href="mailto:">Enviar correo</a> 
+         </div>
+        <h3>Desarrollado por Comisión 24167 - Grupo 12</h3>
+        <h3> © Todos los derechos reservados</h3>
+    </footer>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../statics/js/editar_persona.js"></script>
+    <script src="../statics/js/header.js"></script>
+    <script src="../statics/js/datos_editar.js"></script>
+</body>
+</html>
