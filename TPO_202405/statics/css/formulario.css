@@ -5,16 +5,6 @@ que selecciona el elemento raíz del documento HTML,
 es decir, el elemento <html>. 
 Permite definir variables globales que se pueden
 usar en cualquier parte del documento CSS. #007bff */
-:root{
-    --color-primario:#f1f5f5;
-    --color-fondo-header: var(--color-primario);
-    --color-texto-header: black;
-    --color-azul-body: rgba(0, 139, 191, 1); 
-    --color-gris-body: rgba(255, 255, 255, 0.4);
-    --color-logo-sombra: rgba(83, 175, 236, 0.5);
-    margin: 10px;
-
-}
 /* Hoja de estilos externa */
 /* Selectores universal */
 /* El selector universal puede ser muy útil en algunos casos para resetear ciertas propiedades
@@ -34,23 +24,38 @@ h2 {
     color: blue;
     background-color: lightblue;
 }
-
- p{
+p{
     padding: 10px;
 }
 
 table {
-    width: 100%;
+background-color: lightblue; 
+border-collapse: collapse;
+width: 60vw;
+max-width: 60vw;
+margin: 2vw auto;
+font-family: Arial, sans-serif;
+height:auto;
+
 }
 img{
-    width:500px; height:600px;
-}
+  background-color: lightblue; 
+ border-collapse: collapse;
+ width: 27vw;
+ max-width: 27vw;
+ margin: 2vw auto;
+ font-family: Arial, sans-serif;
+ height:auto;
+ }
+ img:hover  {-webkit-transform:scale(1.3);transform:scale(1.3);}
+ img {overflow:hidden;}
+    
 th, td{
-    width: 50%;
-    font-size: 25px;
+    border: 0.1vw solid #dddddd;
+    padding: 0.8vw;
     text-align: left;
-    vertical-align: top;
-    padding: 10px;
+    color: #dddddd;
+
 }
 ol, ul{
      padding: 0px 450px 10px;
@@ -59,21 +64,23 @@ ol, ul{
 imagen de fondo,tamaño, posición, color, alinear texto, alto margen
 y relleno cero. */
 #seccion-con-fondo{
-    background-image: url('../img/Catolicismo.png'); /*url('../img/beautiful-shot-moreno-glacier-santa-cruz-argentina.jpg');*/
+    background-image: url('../img/Catolicismo.png');
     background-size:cover;
     background-position: center;
     text-align: center;
-    height: 100vh;
+    height: 110vh;
     padding-left: 0.5cm;
 
 }
 
 .tabla{
-    width: 25%;
-    font-size: 25px;
-    text-align: center;
-    vertical-align: top;
-    padding: 10px;
+    background-color: blue; 
+    border-collapse: collapse;
+    width: 60vw;
+    max-width: 60vw;
+    margin: 2vw auto;
+    font-family: Arial, sans-serif;
+    height:auto;
 }
 
 .titulo{
@@ -110,6 +117,9 @@ dentro el contenedor. */
 .en-linea{
     display: inline;
     vertical-align: middle;
+    height: 10vh;
+    gap: 2vw;
+    text-decoration: none;
 }
 
 /*  Selecionar los hiperviculos del
@@ -127,13 +137,14 @@ a los costados, superior e inferior nada. */
     background-color: lightblue;
     font-style: normal;
     font-size: 100%;
-  /*  text-align: center;
-    background-color: lightblue;
-    margin-left: 100px;*/
-}
+    border-collapse: collapse;
+    width: 60vw;
+    max-width: 60vw;
+    margin: 2vw auto;
+    height:auto;
+    }
 #texto2 {
     color: black;
-   /* background-color: white;*/
     font-style: normal;
     font-size: 100%;
     text-align: center;
@@ -142,17 +153,27 @@ a los costados, superior e inferior nada. */
 }
 
 /*-----------background PSEUDOCLASES PARA ETIQUETAS < A > --------------*/
-a{ color: white}
+a{  font-size: 2vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    color: aliceblue;}
 a:link {color: red;}
-a:hover {background-color: yellow;}
+a:hover{
+    background-color: #f2f2f2;
+    color:#001F3F
+}
+
 a:visited {color: blue;}
 a:active {background-color: green; color: white;}
 
 .contenedor {
-    display: flex; /*aca le digo que es flexible */
-    flex-direction:row;
-    flex-wrap: wrap;
-    background-color: blue;
+    /*display: flex; /*aca le digo que es flexible */
+    background: radial-gradient(circle, #add8e6, #00aeff); 
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contenedor > div {
@@ -166,6 +187,9 @@ a:active {background-color: green; color: white;}
 
 form{
     padding: 40px;
+    background: #eee;
+    border-radius: 5px;
+    margin: 36px 0;
 }
 
 header{
@@ -182,7 +206,174 @@ footer{
     padding: 20px;
 }
 
-.texto1 {
+@media screen and (max-width:768px){
+/*-----------background PSEUDOCLASES PARA ETIQUETAS < A > --------------*/
+a{  font-size: 2vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    color: aliceblue;}
+a:link {color: red;}
+a:hover{
+    background-color: #f2f2f2;
+    color:#001F3F
+}
+
+a:visited {color: blue;}
+a:active {background-color: green; color: white;}
+
+.contenedor {
+    /*display: flex; /*aca le digo que es flexible */
+    background: radial-gradient(circle, #add8e6, #00aeff); 
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contenedor > div {
+    background-color: red;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+form{
+    padding: 40px;
+    background: #eee;
+    border-radius: 5px;
+    margin: 36px 0;
+}
+
+header{
+    background-color: var(--color-fondo-header);
+    color: var(--color-texto-header);
+    text-align: left; /* center; */
+    padding: 20px;
+}
+
+footer{
+    background-color: var(--color-fondo-header);
+    color:var(--color-texto-header);
+    text-align: left; /* center; */
+    padding: 20px;
+}
+}
+@media screen and (max-width:425px){
+   /*-----------background PSEUDOCLASES PARA ETIQUETAS < A > --------------*/
+   a{  font-size: 2vw;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       text-decoration: none;
+       color: aliceblue;}
+   a:link {color: red;}
+   a:hover{
+       background-color: #f2f2f2;
+       color:#001F3F
+   }
+   
+   a:visited {color: blue;}
+   a:active {background-color: green; color: white;}
+   
+   .contenedor {
+       /*display: flex; /*aca le digo que es flexible */
+       background: radial-gradient(circle, #add8e6, #00aeff); 
+       height: 150vh;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+   }
+   
+   .contenedor > div {
+       background-color: red;
+       width: 100px;
+       margin: 10px;
+       text-align: center;
+       line-height: 75px;
+       font-size: 30px;
+   }
+   
+   form{
+       padding: 40px;
+       background: #eee;
+       border-radius: 5px;
+       margin: 36px 0;
+   }
+   
+   header{
+       background-color: var(--color-fondo-header);
+       color: var(--color-texto-header);
+       text-align: left; /* center; */
+       padding: 20px;
+   }
+   
+   footer{
+       background-color: var(--color-fondo-header);
+       color:var(--color-texto-header);
+       text-align: left; /* center; */
+       padding: 20px;
+   }
+   }
+   @media screen and (max-width:320px){
+   /*-----------background PSEUDOCLASES PARA ETIQUETAS < A > --------------*/
+   a{  font-size: 2vw;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       text-decoration: none;
+       color: aliceblue;}
+   a:link {color: red;}
+   a:hover{
+       background-color: #f2f2f2;
+       color:#001F3F
+   }
+   
+   a:visited {color: blue;}
+   a:active {background-color: green; color: white;}
+   
+   .contenedor {
+       /*display: flex; /*aca le digo que es flexible */
+       background: radial-gradient(circle, #add8e6, #00aeff); 
+       height: 150vh;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+   
+   }
+   
+   .contenedor > div {
+       background-color: red;
+       width: 100px;
+       margin: 10px;
+       text-align: center;
+       line-height: 75px;
+       font-size: 30px;
+   }
+   
+   form{
+       padding: 40px;
+       background: #eee;
+       border-radius: 5px;
+       margin: 36px 0;
+   }
+   
+   header{
+       background-color: var(--color-fondo-header);
+       color: var(--color-texto-header);
+       text-align: left; /* center; */
+       padding: 20px;
+   }
+   
+   footer{
+       background-color: var(--color-fondo-header);
+       color:var(--color-texto-header);
+       text-align: left; /* center; */
+       padding: 20px;
+   }
+   }
+   .texto1 {
     color:black;
     font-style: normal;
     font-size: 150%;
